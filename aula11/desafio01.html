@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRINGO OU NÃO ??</title>
+</head>
+<body>
+    <h1>Você é estrangeiro?</h1>
+    <label for="origem">País de Origem:<input type="text" id="origem"></label>
+    <label for="reside">País que reside:<input type="text" id="reside"></label>
+    <input type="button" value="Descubra" onclick="descubra()">
+    <div id="res"></div>
+
+    <script>
+        function descubra() {
+            var origem = window.document.querySelector('input#origem')
+            var reside = window.document.querySelector('input#reside')
+            var res = window.document.querySelector('div#res')
+            
+            res.innerHTML = `<p>Você nasceu em ${origem.value} e mora em ${reside.value}.</p>`
+            if (origem.value == reside.value) {
+                res.innerHTML += `<p> Você é <strong>nativo</strong> !!</p>`
+            } else {
+                res.innerHTML += `<p> Você é <strong>estrangeiro</strong> ! </p>`
+            }
+        }
+    </script>
+</body>
+</html>
