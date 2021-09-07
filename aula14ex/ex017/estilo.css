@@ -18,7 +18,9 @@ section {
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
 }
-
+div {
+    margin: 5px;
+}
 footer {
     color:white;
     text-align: center;
